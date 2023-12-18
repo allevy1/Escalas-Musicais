@@ -64,7 +64,8 @@ header > h1 {
   font-weight: bold;
 }
 
-.natural {
+.escalaResultado {
+  margin-top: 30px;
   display: flex;
   background-color: #3a3535;
   align-items: center;
@@ -88,15 +89,6 @@ header > h1 {
   margin: 0;
 }
 
-.Bb {
-  margin-top: 30px;
-  display: flex;
-  background-color: #3a3535;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-}
-
 #escalaBb {
   display: flex;
   margin: 0;
@@ -111,15 +103,6 @@ header > h1 {
 
 .notaBb {
   margin: 0;
-}
-
-.Eb {
-  margin-top: 30px;
-  display: flex;
-  background-color: #3a3535;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
 }
 
 #escalaEb {
@@ -150,4 +133,30 @@ header > h1 {
   background-color: black;
   padding: 10px;
   border-radius: 20px;
+}
+
+@media (max-width: 1040px) {
+  .cabeça {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .cabeça {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .escalaResultado > div {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .escalaResultado {
+    border: 3px solid rgb(128, 128, 128);
+  }
+
+  .downContainer {
+    padding: 30px 0;
+  }
 }
